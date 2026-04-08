@@ -53,7 +53,7 @@ The goal of this project was to:
 |  WebSocket Server    |
 +----------------------+
 ```
-3. How Docker Containers Are Set Up
+## 3. How Docker Containers Are Set Up
 
 The application is deployed as a multi-container application using Docker Compose.
 
@@ -77,7 +77,7 @@ Installs dependencies from requirements.txt
 Copies backend application code
 Copies frontend assets required by backend
 Starts Uvicorn server
-4. How Docker Networking Works
+## 4. How Docker Networking Works
 
 Docker Compose automatically creates a shared bridge network for all services.
 
@@ -103,7 +103,7 @@ instead of:
 ```
 http://localhost:8000
 ```
-5. How NGINX Reverse Proxy Works
+## 5. How NGINX Reverse Proxy Works
 
 NGINX is used as the entry point for the application.
 
@@ -131,7 +131,7 @@ NGINX forwards it to the backend container:
 ```
 http://backend:8000/ws
 ```
-6. How WebSocket Works Through NGINX
+## 6. How WebSocket Works Through NGINX
 
 The application uses WebSocket for real-time chat communication.
 
@@ -158,7 +158,7 @@ The application was tested by:
 Opening the app in multiple browser tabs
 Sending messages between tabs
 Verifying real-time message broadcasting works correctly
-7. How CI/CD Pipeline Works
+## 7. How CI/CD Pipeline Works
 
 A GitHub Actions CI/CD pipeline was created to automate deployment.
 
@@ -189,7 +189,7 @@ SERVER_SSH_KEY
 ```
 These secrets allow secure automated deployment without exposing credentials.
 
-8. What Issues I Found and How I Fixed Them
+## 8. What Issues I Found and How I Fixed Them
 
 The repository provided in the assignment contained several deployment misconfigurations.
 
@@ -271,7 +271,7 @@ proxy_set_header Connection "upgrade";
 ```
 This allowed WebSocket connections to upgrade properly.
 
-9. Steps to Deploy the Project
+## 9. Steps to Deploy the Project
 Step 1: Clone the Repository
 ```
 git clone <your-github-repo-link>
@@ -289,11 +289,11 @@ Open in browser:
 ```
 http://<your-public-ip>
 ```
-Step 5: Test WebSocket Functionality
+ Step 5: Test WebSocket Functionality
 Open the app in multiple tabs
 Send chat messages
 Verify real-time communication works correctly
-10. Live Public IP
+## 10. Live Public IP
 
 Application URL:
 ```
@@ -301,7 +301,7 @@ http://<your-public-ip>
 ```
 Replace <your-public-ip> with your actual EC2 public IP.
 
-11. Required Project Files Included
+## 11. Required Project Files Included
 
 This repository contains the required files:
 
@@ -310,7 +310,7 @@ docker-compose.yml
 nginx.conf
 .github/workflows/deploy.yml
 README.md
-12. Cloud Deployment Details
+## 12. Cloud Deployment Details
 
 This project was deployed on:
 
@@ -321,7 +321,7 @@ Port 80 open for HTTP
 Docker installed
 Docker Compose installed
 Git installed
-13. Container Restart Behavior
+## 13. Container Restart Behavior
 
 The containers are configured with:
 ```
@@ -331,7 +331,7 @@ This ensures:
 
 Containers restart automatically if they crash
 Services recover after server restart
-14. Validation Performed
+## 14. Validation Performed
 
 The following validations were completed successfully:
 
@@ -343,7 +343,7 @@ WebSocket works through NGINX
 Multi-user chat works across multiple browser tabs
 Application is accessible via public IP
 GitHub Actions redeploys the application automatically
-15. Submission Deliverables
+## 15. Submission Deliverables
 
 This repository includes all required submission items:
 
@@ -351,7 +351,7 @@ GitHub Repository
 Live Public IP
 Architecture Diagram
 README Documentation
-16. Conclusion
+## 16. Conclusion
 
 This project successfully demonstrates:
 
