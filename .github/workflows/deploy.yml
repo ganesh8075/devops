@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            APP_DIR=/home/ubuntu/devops
+            APP_DIR=/home/ec2-user/devops
 
             if [ ! -d "$APP_DIR" ]; then
               git clone https://github.com/${{ github.repository }} $APP_DIR
